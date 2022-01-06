@@ -9,24 +9,22 @@
     function isFibonacci(num) {
         let a = 0;
         let b = 1;
-        let c= a+b;
-        let arr= [];
-        for(let i= 0; c<=num; i++){
-            arr.push(arr[i]);
+        let c = a + b;
+        let arr = [];
+        for (;c <= num;) {
+            arr.push(c);
             a = b;
-            b= c;
-            c= a+b;
+            b = c;
+            c = a + b;
         }
-        for(let j= 0; j<arr.length; j++){
-            if(num==arr[j]){
-                return num +" co nam trong day fibonacci"
-            }else{
-                return  num + " khong nam tron day fibonacci"
-            }
+        if (arr.indexOf(num) >= 0) {
+            return true;
+        } else {
+            return false;
         }
+    }
 
-            }
-            let num =9;
+    let num = 8;
     document.write(isFibonacci(num));
 </script>
 </body>
